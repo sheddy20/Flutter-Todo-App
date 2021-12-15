@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:myride/screens/sign_up.dart';
-import 'package:myride/widgets/welcome_screen.dart';
+import 'package:myride/widgets/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,9 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "MyRide",
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       routes: {
-        "/": (_) => SignUpScreen(),
-        "/welcome": (_) => WelcomeScreen(),
+        "/": (_) => HomeScreen(),
       },
     );
   }
